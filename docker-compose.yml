@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  orderconsumer:
+    image: ${DOCKER_REGISTRY-}orderconsumer
+    build:
+      context: .
+      dockerfile: OrderConsumer/Dockerfile
+  rabbitmq:
+    image: masstransit/rabbitmq
